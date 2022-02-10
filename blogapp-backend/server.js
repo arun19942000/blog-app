@@ -5,10 +5,12 @@ const ArticleInfo = require("./src/model/BlogDB");
 
 const app = express();
 app.use(cors());
-// const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5001;
 // Post Method
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+const path = require('path');
+app.use(express.static('./build'));
 
 // Basic Article Fetch Route
 app.get("/api/article/:name", (req, res) => {
