@@ -6,7 +6,7 @@ const UserInfo = require("./src/model/signupDb");
 
 const app = express();
 app.use(cors());
-// const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5000;
 // Post Method
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -57,6 +57,6 @@ app.post("/signup", (req, res) => {
 });
 
 // Port number
-app.listen(5001, () => {
-  console.log("Listening on port 5001");
+app.listen(5000, () => {
+  console.log("Listening on port 5000");
 });
