@@ -1,0 +1,29 @@
+* {
+  padding: 0px;
+  margin: 0%;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+  /* position: fixed; */
+  background-color: darkcyan;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: whitesmoke;
+  padding-left: 10rem;
+}
+
+.articles {
+  padding-left: 10rem;
+}
+
+.link {
+  padding: 10px;
+  text-decoration: none;
+  color: whitesmoke;
+}
