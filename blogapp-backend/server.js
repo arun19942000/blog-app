@@ -2,9 +2,11 @@ const express = require("express");
 const cors = require("cors");
 const ArticleInfo = require("./src/model/BlogDB");
 const UserInfo = require("./src/model/signupDb");
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
+const PORT = process.env.PORT || 5001;
 // Post Method
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
