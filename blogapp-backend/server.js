@@ -5,7 +5,7 @@ const ArticleInfo = require("./src/model/BlogDB");
 
 const app = express();
 app.use(cors());
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5001;
 // Post Method
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -54,11 +54,8 @@ app.post("/signup", (req, res) => {
   const { username, email, password } = req.body;
   console.log(email);
 });
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('../blogapp-frondend/build'))
-}
 
 // Port number
-app.listen(5000, () => {
-  console.log("Listening on port 5000");
+app.listen(5001, () => {
+  console.log("Listening on port 5001");
 });
