@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect(
+mongoose.connect(process.env.MONGODB_URI ||
     "mongodb+srv://new-user:Arun1994@cluster0.dhth5.mongodb.net/blog?retryWrites=true&w=majority"
 );
 

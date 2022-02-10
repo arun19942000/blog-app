@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const ArticleInfo = require("./src/model/BlogDB");
-const UserInfo = require("./src/model/signupDb");
 // require("dotenv").config();
 
 const app = express();
@@ -55,6 +54,9 @@ app.post("/signup", (req, res) => {
   const { username, email, password } = req.body;
   console.log(email);
 });
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('../blogapp-frondend/build'))
+}
 
 // Port number
 app.listen(5000, () => {
