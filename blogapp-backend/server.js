@@ -58,6 +58,6 @@ app.post("/signup", (req, res) => {
 });
 
 // Port number
-app.listen(5001, () => {
+app.listen(PORT, () => {
   console.log("Listening on port 5001");
 });
