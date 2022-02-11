@@ -1,1 +1,1 @@
-web: node server.js
+web: node /blogapp-frondend/src/App.js
