@@ -59,6 +59,8 @@ app.post("/signup", (req, res) => {
 });
 
 // Port number
-app.listen(PORT, () => {
-  console.log("Listening on port 5001");
+app.listen(process.env.PORT || process.env.CONFIG_SYSTEM_PORT, () => {
+  if (gSystemConfig.configDebug === true) {
+    console.log(`app running on port: ${process.env.PORT || process.env.CONFIG_SYSTEM_PORT}`);
+  }
 });
