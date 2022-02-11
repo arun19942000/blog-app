@@ -4,6 +4,7 @@ const ArticleInfo = require("./src/model/BlogDB");
 // require("dotenv").config();
 
 const app = express();
+var moment = require('moment');
 app.use(cors());
 const PORT = process.env.PORT || 5001;
 // Post Method
